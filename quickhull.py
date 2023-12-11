@@ -45,7 +45,6 @@ def quickhull(points):
        created edges to form the convex hull'''
     point_indicies = list(range(len(points)))
     c_i = list(dict.fromkeys(corners(points, point_indicies))) # remove duplicates
-    steps = [c_i+[c_i[0]]]
     
     # removes any points inside the simplex defined by points in c_i
     if len(c_i) > 2:
